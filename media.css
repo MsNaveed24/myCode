@@ -1,0 +1,56 @@
+ /* Media Query for smaller screens */
+ @media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+ 
+    .header, .footer {
+        grid-column: 1/2;
+    }
+ 
+    .roomMap{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+ 
+    .frontCam, .rearCam, .left-panel {
+        grid-column: 1/2;
+    }
+ }
+ 
+ /* Media Query for screens around 1280px */
+ @media (min-width: 1280px) and (max-width: 1440px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    }
+ 
+    .header {
+        grid-column: 1/4; /* Span across all three columns */
+    }
+ 
+    .roomMap {
+        grid-column: 1/2; /* Span across first column */
+        grid-row: 2/6; /* Span vertically */
+    }
+ 
+    .frontCam {
+        grid-column: 2/3; /* Second column */
+        grid-row: 2/3; /* First row */
+    }
+ 
+    .rearCam{
+        grid-column: 2/3; /* Second column */
+        grid-row: 3/5; /* Second and third rows */
+    }
+ 
+    .left-panel {
+        grid-column: 3/4; /* Third column */
+        grid-row: 2/5; /* Second to fourth rows */
+       }
+ 
+    .footer {
+        grid-column: 1/4; /* Span across all three columns */
+    }
+ }
+ 
